@@ -11,4 +11,12 @@ async function fetchData() {
     console.error(error);
     alert("Error fetching data. Please try again.");
   }
+
+  // Find character by name (case-insensitive)
+  const character = data.find(
+    (char) =>
+      char.fullName.toLowerCase().includes(id) ||
+      char.firstName.toLowerCase().includes(id) ||
+      char.lastName.toLowerCase().includes(id)
+  );
 }
