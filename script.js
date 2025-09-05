@@ -44,3 +44,16 @@ async function fetchData() {
     alert("Error fetching data. Please try again.");
   }
 }
+
+function displayCharacterInfo(character) {
+  // Get the existing character info display element
+  const infoDiv = document.getElementById("characterInfo");
+
+  // Show the element and populate with character info
+  infoDiv.style.display = "block";
+  infoDiv.innerHTML = `
+    <h3>${character.fullName}</h3>
+    <p><strong>Title:</strong> ${character.title || "N/A"}</p>
+    <p><strong>Family:</strong> ${character.family || "N/A"}</p>
+  `;
+}
